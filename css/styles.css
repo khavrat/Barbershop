@@ -143,7 +143,7 @@ img {
 .network__list--hero {
     position: absolute;
     top: 470px; 
-    left: 30px; 
+    left: 0; 
     transform: rotate(-90deg);
 }
 
@@ -235,6 +235,66 @@ img {
     line-height: 1.67;    
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+}
+
+.menu__wrapper {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 325px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu__active {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    opacity: 0;
+    translate: opacity 250ms liner, 
+        transform 250ms liner;
+}
+
+.menu__active:hover,
+.menu__active:focus {
+    opacity: 1;
+    transform: scaleX(100%); 
+}
+
+.slider__wrapper {
+    position: relative;  
+}
+
+.slider__control {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;    
+    letter-spacing: 0.1em;
+    color: rgba(157, 164, 189, 0.6);
+    cursor: pointer;
+    transition: color 250ms liner;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+    color: var(--basic-background-color);
+}
+
+.slider__control--prev {
+    bottom: 40px;
+    right: 140px;
+}
+
+.slider__control--next {
+    bottom: 40px;
+    right: 40px;
 }
 
 /* About section */
@@ -693,12 +753,24 @@ img {
     padding-bottom: calc(70px / 2);
 }
 
+.address__svg {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 16px;
+    stroke: var(--secondary-text-color);
+    fill: none;
+    transition: stroke 250ms linear;
+}
+
 .address__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     font-style: normal;
     font-size: 18px;
     line-height: 1.67;    
     letter-spacing: 0.02em;
+    stroke-width: 1.33px;
     color: var(--secondary-text-color);
     transition: color 250ms linear;
 }
@@ -708,11 +780,17 @@ img {
     color: var(--basic-background-color);
 }
 
+.address__link:hover .address__svg,
+.address__link:focus .address__svg {
+    stroke: var(--basic-background-color);
+}
+
 .address__item:not(:last-child) {
     margin-bottom: 20px;
 }
 
 .address__link--map {
+    display: flex;
     font-weight: 700;
 }
 
