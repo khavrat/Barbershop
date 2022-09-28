@@ -266,12 +266,21 @@ img {
 }
 
 .slider__wrapper {
-    position: relative;  
+    display: inline-flex;
+    position: absolute;
+    bottom: 65px;
+    right: 125px;
+    gap: 24px; 
 }
 
 .slider__control {
-    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    width: 60px;
+    height: 24px;
+    padding: 0;
     border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.6);
     background-color: transparent;
     font-weight: 600;
     font-size: 11px;
@@ -279,22 +288,18 @@ img {
     letter-spacing: 0.1em;
     color: rgba(157, 164, 189, 0.6);
     cursor: pointer;
-    transition: color 250ms liner;
+    transition: color 250ms liner,
+        border-bottom 250ms linear;
 }
 
 .slider__control:hover,
 .slider__control:focus {
     color: var(--basic-background-color);
-}
-
-.slider__control--prev {
-    bottom: 40px;
-    right: 140px;
+    border-bottom: 1px solid var(--basic-background-color);
 }
 
 .slider__control--next {
-    bottom: 40px;
-    right: 40px;
+    justify-content: right;
 }
 
 /* About section */
@@ -484,7 +489,7 @@ img {
     line-height: 1.38;
     text-align: center;
     color: var(--accent-color);
-    transform: translateY(-11px);
+    transform: translateY(-15px);
     margin-left: 2px;
 }
 
