@@ -265,17 +265,21 @@ img {
     transform: scaleX(100%); 
 }
 
+.slider {
+    position: relative;
+}
+
 .slider__wrapper {
     display: inline-flex;
     position: absolute;
-    bottom: 150px;
-    right: 160px;
-    gap: 24px; 
+    bottom: 40px;
+    right: 4px;
 }
 
 .slider__control {
     display: inline-flex;
     align-items: flex-start;
+    margin-right: 24px;
     width: 60px;
     height: 24px;
     padding: 0;
@@ -676,10 +680,17 @@ img {
     outline: none;
     border: none;
     background-color: transparent;
-    background-attachment: fixed;
     border-bottom: 1px solid rgba(157, 164, 189, 0.4);
     color: var(--basic-background-color);
     transition: border-bottom 250ms linear;
+    padding: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 .form__input:hover,
@@ -691,15 +702,7 @@ img {
 
 .form__input--name,
 .form__input--tel {
-    width: 270px;
-}
-
-.form__input--name {
-    padding-left: 50px;
-}
-
-.form__input--tel {
-    padding-left: 57px;
+    width: 270px; 
 }
 
 .form__field {
@@ -718,11 +721,12 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
-    transition: color 250ms linear;
+    transition: color 250ms linear,
+        transform 250ms linear;
 }
 
 .form__field:hover .form__label,
-.form__field:focus .form__label {
+.form__field:focus-within .form__label {
     color: var(--basic-background-color);
 }
 
@@ -733,8 +737,15 @@ img {
 .form__textarea {
     width: 570px;
     resize: none;
-    padding-left: 67px;
 }
+
+.form__textarea:focus ~ .form__label,
+.form__textarea:not(:placeholder-shown) ~ .form__label,
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+    transform: translatey(-24px);
+    color: rgba(157, 164, 189, 0.4);
+} 
 
 /* Contacts */
 .contacts {

@@ -71,9 +71,11 @@
                         </svg>
                     </button>
                 </div>
-                <div class="slider__wrapper">
-                    <button class="slider__control" type="button">Back</button>
-                    <button class="slider__control slider__control--next" type="button">Forward</button>
+                <div class="slider">
+                    <div class="slider__wrapper">
+                        <button class="slider__control" type="button">Back</button>
+                        <button class="slider__control slider__control--next" type="button">Forward</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -342,16 +344,16 @@
                         <form class="form">
                             <div class="form__wrapper">
                                 <label class="form__field">
-                                    <input class="form__input form__input--name" type="text" name="name">
+                                    <input class="form__input form__input--name" type="text" name="name" autocomplete="on" placeholder=" ">
                                     <span class="form__label">Name*</span>
                                 </label>
                                 <label class="form__field">
-                                    <input class="form__input form__input--tel" type="tel" name="tel">
+                                    <input class="form__input form__input--tel" type="tel" name="tel" autocomplete="on" placeholder=" ">
                                     <span class="form__label">Phone*</span>
                                 </label>
                             </div>
                             <label class="form__field form__field--textarea">
-                                <textarea class="form__textarea" name="textarea" rows="4"></textarea>
+                                <textarea class="form__textarea" name="textarea" rows="4" placeholder=" "></textarea>
                                 <span class="form__label">Message</span>
                             </label>
                             <button class="button" type="submit">send</button>
