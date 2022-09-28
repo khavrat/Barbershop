@@ -143,7 +143,7 @@ img {
 .network__list--hero {
     position: absolute;
     top: 470px; 
-    left: 0; 
+    left: 30px; 
     transform: rotate(-90deg);
 }
 
@@ -268,8 +268,8 @@ img {
 .slider__wrapper {
     display: inline-flex;
     position: absolute;
-    bottom: 65px;
-    right: 125px;
+    bottom: 90px;
+    right: 160px;
     gap: 24px; 
 }
 
